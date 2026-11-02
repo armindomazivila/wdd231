@@ -1,0 +1,15 @@
+/* Hide navigation on small screens */
+#navigation {
+    display: none;
+}
+
+/* Show navigation when opened */
+#navigation.open {
+    display: block;
+}
+
+/* Hamburger button */
+#menu-button {
+    display: block;
+    cursor: pointer;
+}

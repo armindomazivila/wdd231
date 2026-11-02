@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Armindo A. Mazivila's WDD231 course homepage, featuring coursework, web development projects, and the Web and Computer Programming certificate.">
+
+    <meta name="author" content="Armindo A. Mazivila">
+
+    <title>WDD231 | Armindo A. Mazivila</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript Files -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+    <header>
+
+        <div class="site-branding">
+            <img src="images/logo.svg" alt="Armindo's website logo" width="50" height="50">
+            <span>Armindo A. Mazivila</span>
+        </div>
+
+        <button id="menu-button" aria-label="Open navigation menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="chamber/index.html">Chamber</a></li>
+                <li><a href="final/index.html">Final</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <h1>Home</h1>
+
+        <div class="home-grid">
+
+            <!-- First Section -->
+            <section class="course-work">
+                <h2>Course Work</h2>
+
+                <p>
+                    Welcome to my WDD231 course homepage.
+                    This website showcases my learning journey
+                    in web development and software development.
+                </p>
+
+                <p>
+                    Here, I will share my coursework, practical
+                    projects, and skills developed throughout
+                    this course.
+                </p>
+            </section>
+
+            <!-- Second Section -->
+            <section class="about-me">
+                <h2>About Me</h2>
+
+                <p>
+                    My name is Armindo A. Mazivila, and I am a
+                    Software Development student at BYU-Pathway
+                    Worldwide.
+                </p>
+
+                <p>
+                    I am interested in programming, web development,
+                    software testing, and database technologies.
+                    My goal is to develop practical technology
+                    skills and build useful software solutions.
+                </p>
+
+                <p>
+                    Location: Mozambique
+                </p>
+            </section>
+
+            <!-- Third Section -->
+            <section class="certificate">
+                <h2>Web and Computer Programming Certificate</h2>
+
+                <div class="course-filters">
+                    <button id="all-courses" class="filter-button active">All Courses</button>
+                    <button id="wdd-courses" class="filter-button">WDD Courses</button>
+                    <button id="cse-courses" class="filter-button">CSE Courses</button>
+                </div>
+
+                <div id="course-container" class="course-grid">
+                    <!-- JavaScript will dynamically display course cards here. -->
+                </div>
+
+                <p id="total-credits">
+                    Total Credits: 0
+                </p>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <!-- First Footer Item: Social Media -->
+        <div class="social-links">
+
+            <a href="https://github.com/armindomazivila" target="_blank" rel="noopener noreferrer"
+                aria-label="Visit my GitHub profile">
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn">
+                LinkedIn
+            </a>
+
+            <a href="mailto:amazivila@byupathway.edu" aria-label="Send me an email">
+                Email
+            </a>
+
+        </div>
+
+        <!-- Second Footer Item: Copyright -->
+        <div class="copyright">
+            <p>
+                &copy; <span id="currentyear"></span>
+                Armindo A. Mazivila | Mozambique
+            </p>
+        </div>
+
+        <!-- Third Footer Item: Last Modified -->
+        <div class="last-modified">
+            <p id="lastModified"></p>
+        </div>
+
+    </footer>
+</body>
+
+</html>
