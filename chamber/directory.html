@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Business Directory | Chamber of Commerce</title>
+
+    <meta name="description"
+        content="Explore local businesses, services, and members of our Chamber of Commerce directory.">
+
+    <meta name="author" content="Armindo Armando Mazivila">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <!-- Facebook Open Graph Metadata -->
+    <meta property="og:title" content="Business Directory | Chamber of Commerce">
+
+    <meta property="og:description"
+        content="Discover local businesses and connect with members of our Chamber of Commerce.">
+
+    <meta property="og:image" content="https://armindomazivila.github.io/wdd231/chamber/images/social-share.jpg">
+
+    <meta property="og:url" content="https://armindomazivila.github.io/wdd231/chamber/directory.html">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:locale" content="en_US">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/directory.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="header-container">
+
+            <div class="logo">
+                <img src="images/favicon.svg" alt="Chamber of Commerce logo">
+
+                <div>
+                    <h1>Chamber of Commerce</h1>
+                    <p>Connecting Businesses, Building Community</p>
+                </div>
+            </div>
+
+            <button id="menu-button" aria-label="Open navigation menu">
+                ☰
+            </button>
+
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav id="navigation">
+
+            <a href="index.html">Home</a>
+
+            <a href="directory.html" class="active">
+                Directory
+            </a>
+
+            <a href="join.html">Join</a>
+
+            <a href="discover.html">Discover</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <section class="directory-section">
+
+            <h2>Business Directory</h2>
+
+            <p>
+                Explore our Chamber of Commerce members
+                and discover businesses in our community.
+            </p>
+
+            <!-- VIEW BUTTONS -->
+            <div class="view-buttons">
+
+                <button id="grid-view" aria-label="Grid view">
+                    Grid View
+                </button>
+
+                <button id="list-view" aria-label="List view">
+                    List View
+                </button>
+
+            </div>
+
+            <!-- MEMBERS WILL BE DISPLAYED HERE -->
+            <div id="members-container" class="grid-view">
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="contact-info">
+
+                <h3>Chamber of Commerce</h3>
+
+                <p>Maputo, Mozambique</p>
+
+                <p>Email: armindo.mazivila1990@gmail.com</p>
+
+                <p>Phone: +258 84 545 9784</p>
+
+            </div>
+
+
+            <div class="development-info">
+
+                <p>
+                    Armindo Armando Mazivila
+                </p>
+
+                <p>
+                    WDD 231 - Web Frontend Development
+                </p>
+
+                <p>
+                    © <span id="current-year"></span>
+                    Chamber of Commerce
+                </p>
+
+                <p>
+                    Last Modification:
+                    <span id="last-modified"></span>
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
