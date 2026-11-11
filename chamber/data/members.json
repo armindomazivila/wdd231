@@ -8,10 +8,10 @@
         "membership": 3
     },
     {
-        "name": "Mozambique Digital Services",
-        "address": "Av. 25 de Setembro, Maputo, Mozambique",
+        "name": "Agenzia Italiana Per La Cooperazione Lllo Sviluppo",
+        "address": "Rua Damiao de Gois, 381, Maputo, Mozambique",
         "phone": "+258 85 234 5678",
-        "website": "https://digitalservices.co.mz/",
+        "website": "https://maputo.aics.gov.it/en/contacts/",
         "image": "images/business-2.webp",
         "membership": 2
     },
@@ -19,7 +19,7 @@
         "name": "Maputo Business Center",
         "address": "Baixa, Maputo, Mozambique",
         "phone": "+258 86 345 6789",
-        "website": "https://example.com",
+        "website": "https://mbtmaputo.com/",
         "image": "images/business-3.webp",
         "membership": 3
     },
@@ -27,39 +27,39 @@
         "name": "Costa do Sol Restaurant",
         "address": "Costa do Sol, Maputo, Mozambique",
         "phone": "+258 87 456 7890",
-        "website": "https://example.com",
+        "website": "https://costadosolrestaurant.com/",
         "image": "images/business-4.webp",
         "membership": 1
     },
     {
-        "name": "Maputo Creative Agency",
-        "address": "Polana, Maputo, Mozambique",
+        "name": "Golo",
+        "address": "Av. Mao tse Tung, Maputo, Mozambique",
         "phone": "+258 84 567 8901",
-        "website": "https://example.com",
+        "website": "https://golo.co.mz/",
         "image": "images/business-5.webp",
         "membership": 2
     },
     {
-        "name": "Mozambique Travel Experts",
-        "address": "Sommerschield, Maputo, Mozambique",
+        "name": "MozUp",
+        "address": "Rua dos Desportistaa, Maputo, Mozambique",
         "phone": "+258 85 678 9012",
-        "website": "https://example.com",
+        "website": "https://mozup.org/contate-nos/",
         "image": "images/business-6.webp",
         "membership": 1
     },
     {
-        "name": "Maputo Financial Consultants",
-        "address": "Av. Eduardo Mondlane, Maputo, Mozambique",
+        "name": "Intellica, Maputo",
+        "address": "Rua de Sommerschield Maputo, Mozambique",
         "phone": "+258 86 789 0123",
-        "website": "https://example.com",
+        "website": "https://www.intellica.co.mz/contacto/",
         "image": "images/business-7.webp",
         "membership": 3
     },
     {
-        "name": "Mozambique Construction Group",
-        "address": "Matola, Mozambique",
+        "name": "Maputo Shopping Center",
+        "address": "AV. Vladimir Lenin, Mozambique",
         "phone": "+258 87 890 1234",
-        "website": "https://example.com",
+        "website": "https://www.myguidemozambique.com/pt/shopping/maputo-shopping-centre",
         "image": "images/business-8.webp",
         "membership": 2
     }
