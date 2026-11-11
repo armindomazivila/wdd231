@@ -3,7 +3,7 @@
         "name": "Maputo Technology Solutions",
         "address": "Av. Julius Nyerere, Maputo, Mozambique",
         "phone": "+258 84 123 4567",
-        "website": "https://example.com",
+        "website": "https://techsolutions.co.mz/en/sobre-nos/",
         "image": "images/business-1.webp",
         "membership": 3
     },
@@ -11,7 +11,7 @@
         "name": "Mozambique Digital Services",
         "address": "Av. 25 de Setembro, Maputo, Mozambique",
         "phone": "+258 85 234 5678",
-        "website": "https://example.com",
+        "website": "https://digitalservices.co.mz/",
         "image": "images/business-2.webp",
         "membership": 2
     },
