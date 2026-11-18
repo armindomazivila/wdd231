@@ -4,18 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Home | Maputo Chamber of Commerce</title>
-
     <meta name="description"
         content="Welcome to the Maputo Chamber of Commerce. Discover local businesses, upcoming events, weather information, and business opportunities in Maputo, Mozambique.">
-
     <meta name="author" content="Armindo Armando Mazivila">
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="images/favicon.png" type="image/png">
-    <link rel="shortcut icon" href="images/favicon.ico">
+
 
     <!-- Open Graph Metadata -->
     <meta property="og:title" content="Home | Maputo Chamber of Commerce">
@@ -29,237 +26,170 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
     <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/home.css">
 
+
     <!-- JavaScript -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/home.js" defer></script>
-
 </head>
 
-<body>
 
+<body>
     <!-- HEADER -->
     <header>
-
         <div class="header-container">
-
             <div class="logo">
-
                 <img src="images/favicon.png" alt="Maputo Chamber of Commerce logo">
-
                 <div>
-                    <h1>Chamber of Commerce</h1>
+                    <p class="site-name">Chamber of Commerce</p>
                     <p>Connecting Businesses, Building Community</p>
                 </div>
-
             </div>
-
             <button id="menu-button" aria-label="Open navigation menu">
                 ☰
             </button>
-
         </div>
+
 
         <!-- NAVIGATION -->
         <nav id="navigation">
-
             <a href="index.html" class="active" aria-current="page">
                 Home
             </a>
-
             <a href="directory.html">
                 Directory
             </a>
-
             <a href="join.html">
                 Join
             </a>
-
             <a href="discover.html">
                 Discover
             </a>
-
         </nav>
-
     </header>
 
 
     <!-- MAIN CONTENT -->
     <main>
+        <h1>Home | Maputo Chamber of Commerce</h1>
+
 
         <!-- HERO SECTION -->
         <section class="hero">
-
             <img src="images/hero.jpg" alt="Beautiful view of Maputo, Mozambique" class="hero-image"
                 fetchpriority="high">
-
             <div class="hero-content">
-
                 <h2>Welcome to Maputo Chamber of Commerce</h2>
-
                 <p>
                     Connecting local businesses, creating opportunities,
                     and building a stronger business community.
                 </p>
-
                 <a href="join.html" class="join-button">
                     Join the Chamber
                 </a>
-
             </div>
-
         </section>
 
 
         <!-- HOME PAGE CONTENT -->
         <div class="home-container">
-
             <!-- CURRENT EVENTS -->
             <section class="events-section">
-
                 <h2>Current Events</h2>
-
                 <div class="events-container">
-
                     <article class="event-card">
-
                         <h3>Business Networking Event</h3>
-
                         <p>
                             Connect with local entrepreneurs and
                             discover new business opportunities.
                         </p>
-
                         <p>
                             <strong>Location:</strong> Maputo, Mozambique
                         </p>
-
                     </article>
-
                     <article class="event-card">
-
                         <h3>Business Development Workshop</h3>
-
                         <p>
                             Learn new strategies to grow your business
                             and strengthen your professional skills.
                         </p>
-
                         <p>
                             <strong>Location:</strong> Maputo, Mozambique
                         </p>
-
                     </article>
-
                 </div>
-
             </section>
 
 
             <!-- WEATHER SECTION -->
             <section class="weather-section">
-
                 <h2>Weather</h2>
-
                 <div class="weather-container">
-
                     <div class="current-weather">
-
                         <h3>Current Weather</h3>
-
                         <div id="weather-current">
-
                             <p>Loading current weather...</p>
-
                         </div>
-
                     </div>
-
                     <div class="weather-forecast">
-
                         <h3>Weather Forecast</h3>
-
                         <div id="weather-forecast">
-
                             <p>Loading three-day forecast...</p>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </section>
 
 
             <!-- MEMBER SPOTLIGHTS -->
             <section class="spotlights-section">
-
                 <h2>Member Spotlights</h2>
-
                 <p>
                     Discover some of the outstanding businesses
                     that support our Chamber of Commerce.
                 </p>
-
                 <div id="spotlights-container" class="spotlights-container">
-
                     <p>Loading member spotlights...</p>
-
                 </div>
-
             </section>
-
         </div>
-
     </main>
 
 
     <!-- FOOTER -->
     <footer>
-
         <div class="footer-container">
-
             <div class="contact-info">
-
                 <h3>Chamber of Commerce</h3>
-
                 <p>Maputo, Mozambique</p>
-
                 <p>Email: armindo.mazivila1990@gmail.com</p>
-
                 <p>Phone: +258 84 545 9784</p>
-
             </div>
-
             <div class="development-info">
-
                 <p>Armindo Armando Mazivila</p>
-
                 <p>WDD 231 - Web Frontend Development</p>
-
                 <p>
                     © <span id="current-year"></span>
                     Chamber of Commerce
                 </p>
-
                 <p>
                     Last Modification:
                     <span id="last-modified"></span>
                 </p>
-
             </div>
-
         </div>
-
     </footer>
-
 </body>
 
 </html>
