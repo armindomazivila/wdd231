@@ -251,9 +251,7 @@ async function getMemberSpotlights() {
 
             const image = member.image;
 
-            const imagePath = image
-                ? `images/${image}`
-                : "images/favicon.png";
+            const imagePath = member.image || `images/members/${member.name.toLowerCase().replace(/\s+/g, '-')}.jpg`;
 
             return `
 
@@ -263,6 +261,7 @@ async function getMemberSpotlights() {
                         src="${imagePath}"
                         alt="${member.name} logo"
                         loading="lazy"
+                        onerror="this.onerror=null;this.src='images/members/default.jpg';"
                     >
 
                     <h3>${member.name}</h3>
