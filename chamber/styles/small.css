@@ -8,6 +8,10 @@ body {
     line-height: 1.6;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 
 .header-container {
     display: flex;
@@ -131,6 +135,11 @@ img {
     height: auto;
 }
 
+.site-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
 
 @media screen and (max-width: 380px) {
 
