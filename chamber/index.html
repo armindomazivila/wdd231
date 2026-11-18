@@ -3,51 +3,42 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Business Directory | Chamber of Commerce</title>
+    <title>Home | Maputo Chamber of Commerce</title>
 
-    <meta name="description" content="Explore local businesses in Maputo, Mozambique.">
+    <meta name="description"
+        content="Welcome to the Maputo Chamber of Commerce. Discover local businesses, upcoming events, weather information, and business opportunities in Maputo, Mozambique.">
 
     <meta name="author" content="Armindo Armando Mazivila">
-
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="shortcut icon" href="images/favicon.ico">
 
-
-    <!-- Facebook Open Graph Metadata -->
-    <meta property="og:title" content="Business Directory | Chamber of Commerce">
-
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Home | Maputo Chamber of Commerce">
     <meta property="og:description"
-        content="Discover local businesses and connect with members of our Chamber of Commerce in Maputo, Mozambique.">
-
+        content="Connect with businesses, discover opportunities, and explore the Maputo business community.">
     <meta property="og:image" content="https://armindomazivila.github.io/wdd231/chamber/images/social-share.jpg">
-
     <meta property="og:image:width" content="1200">
-
     <meta property="og:image:height" content="630">
-
-    <meta property="og:image:alt" content="Maputo Chamber of Commerce Business Directory">
-
-    <meta property="og:url" content="https://armindomazivila.github.io/wdd231/chamber/directory.html">
-
+    <meta property="og:image:alt" content="Maputo Chamber of Commerce">
+    <meta property="og:url" content="https://armindomazivila.github.io/wdd231/chamber/index.html">
     <meta property="og:type" content="website">
-
     <meta property="og:locale" content="en_US">
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles/members.css">
-
+    <link rel="stylesheet" href="styles/home.css">
 
     <!-- JavaScript -->
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/home.js" defer></script>
 
 </head>
 
@@ -59,12 +50,14 @@
         <div class="header-container">
 
             <div class="logo">
-                <img src="images/favicon.png" alt="Chamber of Commerce logo">
+
+                <img src="images/favicon.png" alt="Maputo Chamber of Commerce logo">
 
                 <div>
                     <h1>Chamber of Commerce</h1>
                     <p>Connecting Businesses, Building Community</p>
                 </div>
+
             </div>
 
             <button id="menu-button" aria-label="Open navigation menu">
@@ -76,15 +69,21 @@
         <!-- NAVIGATION -->
         <nav id="navigation">
 
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active" aria-current="page">
+                Home
+            </a>
 
-            <a href="directory.html" class="active">
+            <a href="directory.html">
                 Directory
             </a>
 
-            <a href="join.html">Join</a>
+            <a href="join.html">
+                Join
+            </a>
 
-            <a href="discover.html">Discover</a>
+            <a href="discover.html">
+                Discover
+            </a>
 
         </nav>
 
@@ -94,34 +93,132 @@
     <!-- MAIN CONTENT -->
     <main>
 
-        <section class="directory-section">
+        <!-- HERO SECTION -->
+        <section class="hero">
 
-            <h2>Business Directory</h2>
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 640px)">
+                <img src="images/hero-small.webp" alt="Beautiful view of Maputo, Mozambique" loading="eager">
+            </picture>
 
-            <p>
-                Explore our Chamber of Commerce members
-                and discover businesses in our community.
-            </p>
+            <div class="hero-content">
 
-            <!-- VIEW BUTTONS -->
-            <div class="view-buttons">
+                <h2>Welcome to Maputo Chamber of Commerce</h2>
 
-                <button id="grid-view" aria-label="Grid view">
-                    Grid View
-                </button>
+                <p>
+                    Connecting local businesses, creating opportunities,
+                    and building a stronger business community.
+                </p>
 
-                <button id="list-view" aria-label="List view">
-                    List View
-                </button>
-
-            </div>
-
-            <!-- MEMBERS WILL BE DISPLAYED HERE -->
-            <div id="members-container" class="grid-view">
+                <a href="join.html" class="join-button">
+                    Join the Chamber
+                </a>
 
             </div>
 
         </section>
+
+
+        <!-- HOME PAGE CONTENT -->
+        <div class="home-container">
+
+            <!-- CURRENT EVENTS -->
+            <section class="events-section">
+
+                <h2>Current Events</h2>
+
+                <div class="events-container">
+
+                    <article class="event-card">
+
+                        <h3>Business Networking Event</h3>
+
+                        <p>
+                            Connect with local entrepreneurs and
+                            discover new business opportunities.
+                        </p>
+
+                        <p>
+                            <strong>Location:</strong> Maputo, Mozambique
+                        </p>
+
+                    </article>
+
+                    <article class="event-card">
+
+                        <h3>Business Development Workshop</h3>
+
+                        <p>
+                            Learn new strategies to grow your business
+                            and strengthen your professional skills.
+                        </p>
+
+                        <p>
+                            <strong>Location:</strong> Maputo, Mozambique
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- WEATHER SECTION -->
+            <section class="weather-section">
+
+                <h2>Weather</h2>
+
+                <div class="weather-container">
+
+                    <div class="current-weather">
+
+                        <h3>Current Weather</h3>
+
+                        <div id="weather-current">
+
+                            <p>Loading current weather...</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="weather-forecast">
+
+                        <h3>Weather Forecast</h3>
+
+                        <div id="weather-forecast">
+
+                            <p>Loading three-day forecast...</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- MEMBER SPOTLIGHTS -->
+            <section class="spotlights-section">
+
+                <h2>Member Spotlights</h2>
+
+                <p>
+                    Discover some of the outstanding businesses
+                    that support our Chamber of Commerce.
+                </p>
+
+                <div id="spotlights-container" class="spotlights-container">
+
+                    <p>Loading member spotlights...</p>
+
+                </div>
+
+            </section>
+
+        </div>
 
     </main>
 
@@ -143,16 +240,11 @@
 
             </div>
 
-
             <div class="development-info">
 
-                <p>
-                    Armindo Armando Mazivila
-                </p>
+                <p>Armindo Armando Mazivila</p>
 
-                <p>
-                    WDD 231 - Web Frontend Development
-                </p>
+                <p>WDD 231 - Web Frontend Development</p>
 
                 <p>
                     © <span id="current-year"></span>
