@@ -1,13 +1,9 @@
-// =====================================
-// CHAMBER HOME PAGE JAVASCRIPT
-// =====================================
-
 
 // =====================================
 // WEATHER API
 // =====================================
 
-const API_KEY = "78612765496a49d92887f83d5ecad960";
+const API_KEY = "72f8856b953424796badff8f65c6a801";
 
 const CITY = "Maputo";
 const COUNTRY = "MZ";
@@ -19,10 +15,15 @@ const FORECAST_URL =
     `https://api.openweathermap.org/data/2.5/forecast?q=${CITY},${COUNTRY}&units=metric&appid=${API_KEY}`;
 
 
-// Get current weather
+// =====================================
+// CURRENT WEATHER
+// =====================================
+
 async function getCurrentWeather() {
 
     const container = document.querySelector("#weather-current");
+
+    if (!container) return;
 
     try {
 
@@ -39,6 +40,7 @@ async function getCurrentWeather() {
         const icon = data.weather[0].icon;
 
         container.innerHTML = `
+
             <div class="weather-current-details">
 
                 <img
@@ -47,6 +49,7 @@ async function getCurrentWeather() {
                 >
 
                 <div>
+
                     <p class="weather-temperature">
                         ${temperature}°C
                     </p>
@@ -62,6 +65,7 @@ async function getCurrentWeather() {
                 </div>
 
             </div>
+
         `;
 
     } catch (error) {
@@ -79,10 +83,15 @@ async function getCurrentWeather() {
 }
 
 
-// Get three-day weather forecast
+// =====================================
+// THREE-DAY WEATHER FORECAST
+// =====================================
+
 async function getWeatherForecast() {
 
     const container = document.querySelector("#weather-forecast");
+
+    if (!container) return;
 
     try {
 
@@ -107,12 +116,14 @@ async function getWeatherForecast() {
             // Exclude today's forecast
             if (dateKey !== today) {
 
-                // Select the forecast closest to midday
+                // Select forecast closest to midday
                 if (
                     !dailyForecast[dateKey] ||
                     Math.abs(date.getHours() - 12) <
                     Math.abs(
-                        new Date(dailyForecast[dateKey].dt * 1000).getHours() - 12
+                        new Date(
+                            dailyForecast[dateKey].dt * 1000
+                        ).getHours() - 12
                     )
                 ) {
 
@@ -127,6 +138,7 @@ async function getWeatherForecast() {
         const forecastDays = Object.values(dailyForecast).slice(0, 3);
 
         container.innerHTML = `
+
             <div class="forecast-container">
 
                 ${forecastDays.map(day => {
@@ -144,25 +156,28 @@ async function getWeatherForecast() {
             const icon = day.weather[0].icon;
 
             return `
-                        <div class="forecast-day">
 
-                            <h4>${dayName}</h4>
+                <div class="forecast-day">
 
-                            <img
-                                src="https://openweathermap.org/img/wn/${icon}@2x.png"
-                                alt="${description}"
-                            >
+                    <h4>${dayName}</h4>
 
-                            <p><strong>${temperature}°C</strong></p>
+                    <img
+                        src="https://openweathermap.org/img/wn/${icon}@2x.png"
+                        alt="${description}"
+                    >
 
-                            <p>${description}</p>
+                    <p><strong>${temperature}°C</strong></p>
 
-                        </div>
-                    `;
+                    <p>${description}</p>
+
+                </div>
+
+            `;
 
         }).join("")}
 
             </div>
+
         `;
 
     } catch (error) {
@@ -173,7 +188,7 @@ async function getWeatherForecast() {
             </p>
         `;
 
-        console.error("Forecast error:", error);
+        console.error("Weather forecast error:", error);
 
     }
 
@@ -184,51 +199,106 @@ async function getWeatherForecast() {
 // MEMBER SPOTLIGHTS
 // =====================================
 
+
+// Correctly resolve member image paths
+function getMemberImagePath(member) {
+
+    const image = member.image?.trim();
+
+    if (!image) {
+        return "images/favicon.png";
+    }
+
+    // Keep complete external image URLs
+    if (/^https?:\/\//i.test(image)) {
+        return image;
+    }
+
+    // Remove leading ./ and duplicate images/ folders
+    const cleanImage = image
+        .replace(/^\.?\//, "")
+        .replace(/^images\/images\//, "images/");
+
+    // Keep existing images/ paths
+    if (cleanImage.startsWith("images/")) {
+        return cleanImage;
+    }
+
+    // Add images/ when only the filename is supplied
+    return `images/${cleanImage}`;
+
+}
+
+
+// Randomize array using Fisher-Yates shuffle
+function shuffleMembers(members) {
+
+    const shuffled = [...members];
+
+    for (let i = shuffled.length - 1; i > 0; i--) {
+
+        const j = Math.floor(Math.random() * (i + 1));
+
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+
+    }
+
+    return shuffled;
+
+}
+
+
+// Fetch and display Gold and Silver members
 async function getMemberSpotlights() {
 
     const container = document.querySelector("#spotlights-container");
 
+    if (!container) return;
+
     try {
 
+        // Fetch members JSON
         const response = await fetch("data/members.json");
 
         if (!response.ok) {
             throw new Error("Unable to load member information.");
         }
 
-        const data = await response.json();
-
-        // Support either a direct array or an object containing members
-        const members = Array.isArray(data) ? data : data.members;
+        const members = await response.json();
 
         if (!Array.isArray(members)) {
-            throw new Error("Invalid members JSON structure.");
+            throw new Error("Members data must be an array.");
         }
+
 
         // Select Gold and Silver members only
         const qualifiedMembers = members.filter(member => {
 
-            const level = Number(member.membershipLevel ?? member.membership);
+            const level = Number(
+                member.membershipLevel ?? member.membership
+            );
 
             return level === 2 || level === 3;
 
         });
 
-        // Randomly shuffle members
-        const shuffledMembers = qualifiedMembers.sort(
-            () => Math.random() - 0.5
-        );
 
-        // Randomly select 2 or 3 members
+        // Randomly shuffle qualified members
+        const shuffledMembers = shuffleMembers(qualifiedMembers);
+
+
+        // Randomly display 2 or 3 members
         const numberOfSpotlights = Math.min(
             shuffledMembers.length,
             Math.floor(Math.random() * 2) + 2
         );
 
+
         const selectedMembers = shuffledMembers.slice(
             0,
             numberOfSpotlights
         );
+
 
         if (selectedMembers.length === 0) {
 
@@ -240,18 +310,19 @@ async function getMemberSpotlights() {
 
         }
 
-        // Display selected members
+
+        // Generate member spotlight cards
         container.innerHTML = selectedMembers.map(member => {
 
             const level = Number(
                 member.membershipLevel ?? member.membership
             );
 
-            const membershipName = level === 3 ? "Gold Member" : "Silver Member";
+            const membershipName = level === 3
+                ? "Gold Member"
+                : "Silver Member";
 
-            const image = member.image;
-
-            const imagePath = member.image || `images/members/${member.name.toLowerCase().replace(/\s+/g, '-')}.jpg`;
+            const imagePath = getMemberImagePath(member);
 
             return `
 
@@ -261,7 +332,7 @@ async function getMemberSpotlights() {
                         src="${imagePath}"
                         alt="${member.name} logo"
                         loading="lazy"
-                        onerror="this.onerror=null;this.src='images/members/default.jpg';"
+                        onerror="this.onerror=null; this.src='images/favicon.png';"
                     >
 
                     <h3>${member.name}</h3>
@@ -277,9 +348,11 @@ async function getMemberSpotlights() {
                     </p>
 
                     <p>
-                        <a href="${member.website}"
-                           target="_blank"
-                           rel="noopener noreferrer">
+                        <a
+                            href="${member.website}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Visit Website
                         </a>
                     </p>
@@ -293,6 +366,7 @@ async function getMemberSpotlights() {
             `;
 
         }).join("");
+
 
     } catch (error) {
 

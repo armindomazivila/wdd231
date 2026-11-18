@@ -1,4 +1,11 @@
-/* hero section */
+/* =====================================
+   CHAMBER HOME PAGE STYLES
+===================================== */
+
+
+/* =====================================
+   HERO SECTION
+===================================== */
 
 .hero {
     position: relative;
@@ -9,7 +16,7 @@
 .hero-image {
     display: block;
     width: 100%;
-    max-height: 500px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -20,15 +27,15 @@
     transform: translate(-50%, -50%);
     width: 85%;
     max-width: 700px;
-    padding: 25px;
+    padding: 20px;
     text-align: center;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.75);
     color: white;
     border-radius: 8px;
 }
 
 .hero-content h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 15px;
 }
 
@@ -45,6 +52,7 @@
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .join-button:hover {
@@ -52,7 +60,9 @@
 }
 
 
-/* HOME CONTAINER */
+/* =====================================
+   HOME CONTAINER
+===================================== */
 
 .home-container {
     max-width: 1200px;
@@ -72,7 +82,9 @@
 }
 
 
-/* EVENTS SECTION */
+/* =====================================
+   EVENTS SECTION
+===================================== */
 
 .events-container {
     display: grid;
@@ -97,7 +109,9 @@
 }
 
 
-/* WEATHER SECTION */
+/* =====================================
+   WEATHER SECTION
+===================================== */
 
 .weather-container {
     display: grid;
@@ -126,6 +140,7 @@
 .weather-current-details img {
     width: 90px;
     height: 90px;
+    object-fit: contain;
 }
 
 .weather-temperature {
@@ -139,18 +154,19 @@
 }
 
 
-/* WEATHER FORECAST */
+/* =====================================
+   WEATHER FORECAST
+===================================== */
 
 .forecast-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
 }
 
 .forecast-day {
-    flex: 1 1 100px;
     background: white;
-    padding: 12px;
+    padding: 12px 5px;
     text-align: center;
     border-radius: 6px;
 }
@@ -158,14 +174,21 @@
 .forecast-day img {
     width: 60px;
     height: 60px;
+    object-fit: contain;
 }
 
 .forecast-day h4 {
     color: #12355b;
 }
 
+.forecast-day p {
+    font-size: 0.9rem;
+}
 
-/* MEMBER SPOTLIGHTS */
+
+/* =====================================
+   MEMBER SPOTLIGHTS
+===================================== */
 
 .spotlights-container {
     display: grid;
@@ -174,6 +197,9 @@
 }
 
 .spotlight-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -183,10 +209,11 @@
 }
 
 .spotlight-card img {
-    width: 120px;
-    height: 100px;
+    display: block;
+    width: 150px;
+    height: 120px;
     object-fit: contain;
-    margin-bottom: 15px;
+    margin: 0 auto 15px;
 }
 
 .spotlight-card h3 {
@@ -195,6 +222,7 @@
 
 .spotlight-card p {
     line-height: 1.5;
+    overflow-wrap: anywhere;
 }
 
 .spotlight-card a {
@@ -214,11 +242,13 @@
     padding: 5px 12px;
     border-radius: 15px;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: auto;
 }
 
 
-/* ERROR MESSAGES */
+/* =====================================
+   ERROR MESSAGES
+===================================== */
 
 .error-message {
     color: #b00020;
@@ -228,13 +258,22 @@
 }
 
 
-
-/* RESPONSIVE DESIGN */
+/* =====================================
+   TABLET RESPONSIVE DESIGN
+===================================== */
 
 @media screen and (min-width: 640px) {
 
     .hero-image {
-        height: 450px;
+        height: 400px;
+    }
+
+    .hero-content {
+        padding: 25px;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
     }
 
     .events-container {
@@ -251,6 +290,10 @@
 
 }
 
+
+/* =====================================
+   DESKTOP RESPONSIVE DESIGN
+===================================== */
 
 @media screen and (min-width: 900px) {
 
