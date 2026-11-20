@@ -6,14 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Join | Maputo Chamber of Commerce</title>
-
     <meta name="description"
-        content="Join the Maputo Chamber of Commerce and grow your business through networking, resources, and business opportunities.">
+        content="Join the Maputo Chamber of Commerce to connect with businesses, access resources, and discover business opportunities in Maputo.">
 
     <meta name="author" content="Armindo Armando Mazivila">
 
     <link rel="icon" href="images/favicon.ico">
-
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
@@ -28,220 +26,255 @@
 
 <body>
 
-    <header>
-        <!-- Reuse your existing homepage header -->
-    </header>
-
-    <nav id="navigation">
-        <a href="index.html">Home</a>
-        <a href="directory.html">Directory</a>
-        <a href="join.html" class="active">Join</a>
-        <a href="discover.html">Discover</a>
-    </nav>
-
-    <main class="join-main">
-
-        <h1>Join the Maputo Chamber of Commerce</h1>
-
-        <p class="join-intro">
-            Become a member of our business community.
-            Connect with other businesses, discover opportunities,
-            and contribute to economic growth in Maputo.
-        </p>
-
-        <div class="join-container">
-
-            <!-- Membership Application Form -->
-
-            <section class="form-section">
-
-                <h2>Membership Application</h2>
-
-                <form method="get" action="thankyou.html">
-
-                    <label for="first-name">First Name</label>
-                    <input type="text" id="first-name" name="first-name" required autocomplete="given-name">
-
-                    <label for="last-name">Last Name</label>
-                    <input type="text" id="last-name" name="last-name" required autocomplete="family-name">
-
-                    <label for="title">Organizational Title</label>
-                    <input type="text" id="title" name="title" autocomplete="organization-title"
-                        pattern="[A-Za-z\s\-]{7,}">
-
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required autocomplete="email"
-                        placeholder="example@email.com">
-
-                    <label for="phone">Mobile Phone</label>
-                    <input type="tel" id="phone" name="phone" required autocomplete="tel">
-
-                    <label for="business">Business / Organization Name</label>
-                    <input type="text" id="business" name="business" required autocomplete="organization">
-
-                    <h3>Membership Level</h3>
-
-                    <label>
-                        <input type="radio" name="membership" value="NP Membership" required>
-                        NP Membership (Non-Profit)
-                    </label>
-
-                    <label>
-                        <input type="radio" name="membership" value="Bronze Membership">
-                        Bronze Membership
-                    </label>
-
-                    <label>
-                        <input type="radio" name="membership" value="Silver Membership">
-                        Silver Membership
-                    </label>
-
-                    <label>
-                        <input type="radio" name="membership" value="Gold Membership">
-                        Gold Membership
-                    </label>
-
-                    <label for="description">Business Description</label>
-                    <textarea id="description" name="description" rows="5"></textarea>
-
-                    <input type="hidden" id="timestamp" name="timestamp">
-
-                    <input type="submit" value="Submit Membership Application" class="submit-button">
-
-                </form>
-
-            </section>
-
-            <!-- Membership Cards -->
-
-            <section class="membership-section">
-
-                <h2>Membership Benefits</h2>
-
-                <div class="membership-card">
-                    <h3>NP Membership</h3>
-                    <p>For nonprofit organizations.</p>
-                    <a href="#np-modal">View Benefits</a>
+    <! -- Header Section -- <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/favicon.png" alt="Maputo Chamber of Commerce logo">
+                <div>
+                    <p class="site-name">Chamber of Commerce</p>
+                    <p>Connecting Businesses, Building Community</p>
                 </div>
-
-                <div class="membership-card">
-                    <h3>Bronze Membership</h3>
-                    <p>Start growing your business network.</p>
-                    <a href="#bronze-modal">View Benefits</a>
-                </div>
-
-                <div class="membership-card">
-                    <h3>Silver Membership</h3>
-                    <p>Access additional business opportunities.</p>
-                    <a href="#silver-modal">View Benefits</a>
-                </div>
-
-                <div class="membership-card">
-                    <h3>Gold Membership</h3>
-                    <p>Enjoy premium business benefits.</p>
-                    <a href="#gold-modal">View Benefits</a>
-                </div>
-
-            </section>
-
-            <!-- NP MODAL -->
-
-            <dialog id="np-modal">
-
-                <h2>NP Membership Benefits</h2>
-
-                <ul>
-                    <li>Free membership for nonprofit organizations.</li>
-                    <li>Community networking opportunities.</li>
-                    <li>Access to selected chamber events.</li>
-                </ul>
-
-                <button class="close-modal">Close</button>
-
-            </dialog>
-
-            <!-- BRONZE MODAL -->
-
-            <dialog id="bronze-modal">
-
-                <h2>Bronze Membership Benefits</h2>
-
-                <ul>
-                    <li>Business networking opportunities.</li>
-                    <li>Access to selected workshops.</li>
-                    <li>Business directory listing.</li>
-                </ul>
-
-                <button class="close-modal">Close</button>
-
-            </dialog>
-
-            <!-- SILVER MODAL -->
-
-            <dialog id="silver-modal">
-
-                <h2>Silver Membership Benefits</h2>
-
-                <ul>
-                    <li>All Bronze membership benefits.</li>
-                    <li>Advertising opportunities.</li>
-                    <li>Discounted event registration.</li>
-                    <li>Special business training.</li>
-                </ul>
-
-                <button class="close-modal">Close</button>
-
-            </dialog>
-
-            <!-- GOLD MODAL -->
-
-            <dialog id="gold-modal">
-
-                <h2>Gold Membership Benefits</h2>
-
-                <ul>
-                    <li>All Silver membership benefits.</li>
-                    <li>Premium advertising opportunities.</li>
-                    <li>Priority event invitations.</li>
-                    <li>Exclusive networking opportunities.</li>
-                </ul>
-
-                <button class="close-modal">Close</button>
-
-            </dialog>
-
+            </div>
+            <button id="menu-button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navigation">
+                ☰
+            </button>
         </div>
 
-    </main>
+        <!-- MAIN NAVIGATION -->
 
-    <footer>
-        <div class="footer-container">
-            <div class="contact-info">
-                <h3>Chamber of Commerce</h3>
-                <p>Maputo, Mozambique</p>
-                <p>Email: armindo.mazivila1990@gmail.com</p>
-                <p>Phone: +258 84 545 9784</p>
+        <nav id="navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html" class="active" aria-current="page">Join</a>
+            <a href="discover.html">Discover</a>
+        </nav>
+        </header>
+
+        <!-- MAIN CONTENT -->
+
+        <main class="join-main">
+            <h1>Join the Maputo Chamber of Commerce</h1>
+            <p class="join-intro">
+                Become a member of our business community.
+                Connect with other businesses, discover opportunities,
+                and contribute to economic growth in Maputo.
+            </p>
+            <div class="join-container">
+
+
+                <!-- MEMBERSHIP APPLICATION FORM -->
+
+                <section class="form-section" aria-labelledby="application-heading">
+                    <h2 id="application-heading">Membership Application</h2>
+                    <form method="get" action="thankyou.html">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" title="Enter your first name."
+                            autocomplete="given-name" required>
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" title="Enter your last name."
+                            autocomplete="family-name" required>
+                        <label for="title">Organizational Title</label>
+                        <input type="text" id="title" name="title"
+                            title="Enter your organizational title using at least seven letters, spaces, or hyphens."
+                            autocomplete="organization-title" pattern="[A-Za-z -]{7,}" required>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" title="Enter a valid email address."
+                            autocomplete="email" placeholder="example@email.com" required>
+                        <label for="phone">Mobile Phone</label>
+                        <input type="tel" id="phone" name="phone" title="Enter your mobile phone number."
+                            autocomplete="tel" required>
+                        <label for="business">Business / Organization Name</label>
+                        <input type="text" id="business" name="business"
+                            title="Enter your business or organization name." autocomplete="organization" required>
+
+                        <!-- MEMBERSHIP LEVEL -->
+
+                        <fieldset class="membership-options">
+                            <legend>Choose Your Membership Level</legend>
+                            <label for="np-membership">
+                                <input type="radio" id="np-membership" name="membership" value="NP Membership"
+                                    title="Select NP Membership." required>
+                                NP Membership (Non-Profit)
+
+                            </label>
+
+                            <label for="bronze-membership">
+                                <input type="radio" id="bronze-membership" name="membership" value="Bronze Membership"
+                                    title="Select Bronze Membership.">
+                                Bronze Membership
+                            </label>
+                            <label for="silver-membership">
+                                <input type="radio" id="silver-membership" name="membership" value="Silver Membership"
+                                    title="Select Silver Membership.">
+                                Silver Membership
+                            </label>
+                            <label for="gold-membership">
+                                <input type="radio" id="gold-membership" name="membership" value="Gold Membership"
+                                    title="Select Gold Membership.">
+                                Gold Membership
+                            </label>
+                        </fieldset>
+
+
+                        <!-- BUSINESS DESCRIPTION -->
+
+
+                        <label for="description">Business Description</label>
+                        <textarea id="description" name="description"
+                            title="Briefly describe your business or organization." rows="5"></textarea>
+
+                        <!-- HIDDEN TIMESTAMP -->
+
+                        <input type="hidden" id="timestamp" name="timestamp">
+
+                        <!-- SUBMIT BUTTON -->
+
+                        <button type="submit" class="submit-button">
+                            Submit Membership Application
+                        </button>
+                    </form>
+                </section>
+
+                <!-- MEMBERSHIP BENEFITS CARDS -->
+
+                <section class="membership-section" aria-labelledby="benefits-heading">
+                    <h2 id="benefits-heading">Membership Benefits</h2>
+                    <div class="membership-cards">
+                        <!-- NP CARD -->
+                        <article class="membership-card">
+                            <h3>NP Membership</h3>
+                            <p>For nonprofit organizations.</p>
+                            <button type="button" data-modal="np-modal">
+                                View Benefits
+                            </button>
+                        </article>
+
+                        <!-- BRONZE CARD -->
+
+                        <article class="membership-card">
+                            <h3>Bronze Membership</h3>
+                            <p>Start growing your business network.</p>
+                            <button type="button" data-modal="bronze-modal">
+                                View Benefits
+                            </button>
+                        </article>
+
+
+                        <!-- SILVER CARD -->
+
+
+                        <article class="membership-card">
+                            <h3>Silver Membership</h3>
+                            <p>Access additional business opportunities.</p>
+                            <button type="button" data-modal="silver-modal">
+                                View Benefits
+                            </button>
+                        </article>
+
+
+                        <!-- GOLD CARD -->
+
+                        <article class="membership-card">
+                            <h3>Gold Membership</h3>
+                            <p>Enjoy premium business benefits.</p>
+                            <button type="button" data-modal="gold-modal">
+                                View Benefits
+                            </button>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- NP MEMBERSHIP DIALOG -->
+
+                <dialog id="np-modal" aria-labelledby="np-modal-heading">
+                    <h2 id="np-modal-heading">NP Membership Benefits</h2>
+                    <ul>
+                        <li>Free membership for nonprofit organizations.</li>
+                        <li>Community networking opportunities.</li>
+                        <li>Access to selected chamber events.</li>
+                    </ul>
+                    <button type="button" class="close-modal">
+                        Close
+                    </button>
+                </dialog>
+
+
+                <!-- BRONZE MEMBERSHIP DIALOG -->
+
+
+                <dialog id="bronze-modal" aria-labelledby="bronze-modal-heading">
+                    <h2 id="bronze-modal-heading">Bronze Membership Benefits</h2>
+                    <ul>
+                        <li>Business networking opportunities.</li>
+                        <li>Access to selected workshops.</li>
+                        <li>Business directory listing.</li>
+                    </ul>
+                    <button type="button" class="close-modal">
+                        Close
+                    </button>
+                </dialog>
+
+
+                <!-- SILVER MEMBERSHIP DIALOG -->
+
+
+                <dialog id="silver-modal" aria-labelledby="silver-modal-heading">
+                    <h2 id="silver-modal-heading">Silver Membership Benefits</h2>
+                    <ul>
+                        <li>All Bronze membership benefits.</li>
+                        <li>Advertising opportunities.</li>
+                        <li>Discounted event registration.</li>
+                        <li>Special business training.</li>
+                    </ul>
+                    <button type="button" class="close-modal">
+                        Close
+                    </button>
+                </dialog>
+
+
+                <!-- GOLD MEMBERSHIP DIALOG -->
+
+
+                <dialog id="gold-modal" aria-labelledby="gold-modal-heading">
+                    <h2 id="gold-modal-heading">Gold Membership Benefits</h2>
+                    <ul>
+                        <li>All Silver membership benefits.</li>
+                        <li>Premium advertising opportunities.</li>
+                        <li>Priority event invitations.</li>
+                        <li>Exclusive networking opportunities.</li>
+                    </ul>
+                    <button type="button" class="close-modal">
+                        Close
+                    </button>
+                </dialog>
             </div>
+        </main>
 
-            <div class="development-info">
 
-                <p>Armindo Armando Mazivila</p>
-                <p>WDD 231 - Web Frontend Development</p>
-                <p>
-                    © <span id="current-year"></span>
-                    Chamber of Commerce
-                </p>
+        <!-- FOOTER -->
 
-                <p>
-                    Last Modification:
-                    <span id="last-modified"></span>
-                </p>
-
+        <footer>
+            <div class="footer-container">
+                <div class="contact-info">
+                    <h3>Chamber of Commerce</h3>
+                    <p>Maputo, Mozambique</p>
+                    <p>Email: armindo.mazivila1990@gmail.com</p>
+                    <p>Phone: +258 84 545 9784</p>
+                </div>
+                <div class="development-info">
+                    <p>Armindo Armando Mazivila</p>
+                    <p>WDD 231 - Web Frontend Development</p>
+                    <p>
+                        © <span id="current-year"></span>
+                        Chamber of Commerce
+                    </p>
+                    <p>
+                        Last Modification:
+                        <span id="last-modified"></span>
+                    </p>
+                </div>
             </div>
-
-        </div>
-    </footer>
-
+        </footer>
 </body>
 
 </html>
