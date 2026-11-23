@@ -1,16 +1,11 @@
+const menuButton = document.querySelector('.menu-toggle');
+const primaryNav = document.querySelector('#primary-nav');
 
-const menuButton = document.querySelector("#menu-button");
-const navigation = document.querySelector("#navigation");
-
-menuButton.addEventListener("click", () => {
-    navigation.classList.toggle("open");
-
-    const isOpen = navigation.classList.contains("open");
-
-    menuButton.setAttribute("aria-expanded", isOpen);
-
-    menuButton.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation menu" : "Open navigation menu"
-    );
-});
+if (menuButton && primaryNav) {
+    menuButton.addEventListener('click', () => {
+        const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isOpen));
+        menuButton.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
+        primaryNav.classList.toggle('open', !isOpen);
+    });
+}

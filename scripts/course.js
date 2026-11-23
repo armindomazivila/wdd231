@@ -22,7 +22,7 @@ const courses = [
             'HTML',
             'CSS'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'CSE',
@@ -34,7 +34,7 @@ const courses = [
         technology: [
             'Python'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'CSE',
@@ -46,7 +46,7 @@ const courses = [
         technology: [
             'C#'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -60,7 +60,7 @@ const courses = [
             'CSS',
             'JavaScript'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -77,3 +77,35 @@ const courses = [
         completed: false
     }
 ]
+
+const courseList = document.querySelector('#course-list');
+const creditTotal = document.querySelector('#credit-total');
+const filterButtons = document.querySelectorAll('[data-filter]');
+
+function displayCourses(filter = 'all') {
+    const visibleCourses = filter === 'all' ? courses : courses.filter(course => course.subject === filter);
+    courseList.replaceChildren();
+    visibleCourses.forEach(course => {
+        const card = document.createElement('article');
+        card.className = `course-card${course.completed ? ' completed' : ''}`;
+        if (course.completed) card.setAttribute('aria-label', `${course.subject} ${course.number}, completed`);
+        const name = document.createElement('strong');
+        name.textContent = `${course.subject} ${course.number}`;
+        const details = document.createElement('span');
+        details.textContent = `${course.title} · ${course.credits} credits${course.completed ? ' · Completed' : ''}`;
+        card.append(name, details);
+        courseList.append(card);
+    });
+    creditTotal.textContent = visibleCourses.reduce((total, course) => total + course.credits, 0);
+}
+
+filterButtons.forEach(button => button.addEventListener('click', () => {
+    filterButtons.forEach(item => {
+        const selected = item === button;
+        item.classList.toggle('selected', selected);
+        item.setAttribute('aria-pressed', String(selected));
+    });
+    displayCourses(button.dataset.filter);
+}));
+
+displayCourses();
