@@ -4,20 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Join | Maputo Chamber of Commerce</title>
+
     <meta name="description"
         content="Join the Maputo Chamber of Commerce to connect with businesses, access resources, and discover business opportunities in Maputo, Mozambique.">
+
     <meta name="author" content="Armindo Armando Mazivila">
 
-
     <!-- Favicon -->
-
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="images/favicon.png" type="image/png">
 
-
     <!-- Open Graph Metadata -->
-
     <meta property="og:title" content="Join | Maputo Chamber of Commerce">
     <meta property="og:description"
         content="Become a member of the Maputo Chamber of Commerce and grow your business network.">
@@ -26,20 +25,17 @@
     <meta property="og:type" content="website">
 
     <!-- Google Fonts -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/join.css">
 
     <!-- JavaScript -->
-
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/join.js" defer></script>
@@ -48,23 +44,25 @@
 <body>
 
     <!-- HEADER -->
-
     <header>
         <div class="header-container">
+
             <div class="logo">
                 <img src="images/favicon.png" alt="Maputo Chamber of Commerce logo">
+
                 <div>
                     <p class="site-name">Chamber of Commerce</p>
                     <p>Connecting Businesses, Building Community</p>
                 </div>
             </div>
+
             <button id="menu-button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navigation">
                 ☰
             </button>
+
         </div>
 
         <!-- MAIN NAVIGATION -->
-
         <nav id="navigation" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="directory.html">Directory</a>
@@ -74,24 +72,26 @@
     </header>
 
     <!-- MAIN CONTENT -->
-
     <main class="join-main">
+
         <h1>Join the Maputo Chamber of Commerce</h1>
+
         <p class="join-intro">
             Become a member of our business community.
             Connect with other businesses, discover opportunities,
             and contribute to economic growth in Maputo.
         </p>
+
         <div class="join-container">
 
             <!-- MEMBERSHIP APPLICATION FORM -->
-
             <section class="form-section" aria-labelledby="application-heading">
+
                 <h2 id="application-heading">Membership Application</h2>
+
                 <form method="get" action="thankyou.html">
 
                     <!-- FIRST NAME -->
-
                     <label for="first-name">
                         First Name
                         <input type="text" id="first-name" name="first-name" title="Enter your first name."
@@ -99,7 +99,6 @@
                     </label>
 
                     <!-- LAST NAME -->
-
                     <label for="last-name">
                         Last Name
                         <input type="text" id="last-name" name="last-name" title="Enter your last name."
@@ -107,7 +106,6 @@
                     </label>
 
                     <!-- ORGANIZATIONAL TITLE -->
-
                     <label for="title">
                         Organizational Title
                         <input type="text" id="title" name="title"
@@ -116,7 +114,6 @@
                     </label>
 
                     <!-- EMAIL -->
-
                     <label for="email">
                         Email Address
                         <input type="email" id="email" name="email" title="Enter a valid email address."
@@ -124,7 +121,6 @@
                     </label>
 
                     <!-- PHONE -->
-
                     <label for="phone">
                         Mobile Phone
                         <input type="tel" id="phone" name="phone" title="Enter your mobile phone number."
@@ -132,7 +128,6 @@
                     </label>
 
                     <!-- BUSINESS NAME -->
-
                     <label for="business">
                         Business / Organization Name
                         <input type="text" id="business" name="business"
@@ -140,29 +135,33 @@
                     </label>
 
                     <!-- MEMBERSHIP LEVEL -->
-
                     <fieldset class="membership-options">
+
                         <legend>Choose Your Membership Level</legend>
+
                         <label for="np-membership">
                             <input type="radio" id="np-membership" name="membership" value="np" required>
                             NP Membership (Non-Profit)
                         </label>
+
                         <label for="bronze-membership">
                             <input type="radio" id="bronze-membership" name="membership" value="bronze">
                             Bronze Membership
                         </label>
+
                         <label for="silver-membership">
                             <input type="radio" id="silver-membership" name="membership" value="silver">
                             Silver Membership
                         </label>
+
                         <label for="gold-membership">
                             <input type="radio" id="gold-membership" name="membership" value="gold">
                             Gold Membership
                         </label>
+
                     </fieldset>
 
                     <!-- BUSINESS DESCRIPTION -->
-
                     <label for="description">
                         Business / Organization Description
                         <textarea id="description" name="description"
@@ -170,23 +169,24 @@
                     </label>
 
                     <!-- HIDDEN TIMESTAMP -->
-
                     <input type="hidden" id="timestamp" name="timestamp">
+
                     <!-- SUBMIT BUTTON -->
                     <button type="submit" class="submit-button">
                         Submit Membership Application
                     </button>
+
                 </form>
             </section>
 
             <!-- MEMBERSHIP BENEFITS CARDS -->
-
             <section class="membership-section" aria-labelledby="benefits-heading">
+
                 <h2 id="benefits-heading">Membership Benefits</h2>
+
                 <div class="membership-cards">
 
                     <!-- NP MEMBERSHIP CARD -->
-
                     <article class="membership-card">
                         <h3>NP Membership</h3>
                         <p>For nonprofit organizations.</p>
@@ -196,7 +196,6 @@
                     </article>
 
                     <!-- BRONZE MEMBERSHIP CARD -->
-
                     <article class="membership-card">
                         <h3>Bronze Membership</h3>
                         <p>Start growing your business network.</p>
@@ -206,7 +205,6 @@
                     </article>
 
                     <!-- SILVER MEMBERSHIP CARD -->
-
                     <article class="membership-card">
                         <h3>Silver Membership</h3>
                         <p>Access additional business opportunities.</p>
@@ -216,7 +214,6 @@
                     </article>
 
                     <!-- GOLD MEMBERSHIP CARD -->
-
                     <article class="membership-card">
                         <h3>Gold Membership</h3>
                         <p>Enjoy premium business benefits.</p>
@@ -224,44 +221,49 @@
                             View Benefits
                         </button>
                     </article>
+
                 </div>
             </section>
 
             <!-- NP MEMBERSHIP DIALOG -->
-
             <dialog id="np-modal" aria-labelledby="np-modal-heading">
+
                 <h2 id="np-modal-heading">NP Membership Benefits</h2>
+
                 <p>Free membership for nonprofit organizations.</p>
+
                 <ul>
                     <li>Free membership with no annual fee.</li>
                     <li>Community networking opportunities.</li>
                     <li>Access to selected chamber events.</li>
                     <li>Nonprofit organization visibility.</li>
                 </ul>
-                <button type="button" class="close-modal">
-                    Close
-                </button>
+
+                <button type="button" class="close-modal">Close</button>
+
             </dialog>
 
             <!-- BRONZE MEMBERSHIP DIALOG -->
-
             <dialog id="bronze-modal" aria-labelledby="bronze-modal-heading">
+
                 <h2 id="bronze-modal-heading">Bronze Membership Benefits</h2>
+
                 <ul>
                     <li>Business networking opportunities.</li>
                     <li>Access to selected workshops.</li>
                     <li>Business directory listing.</li>
                     <li>Business development resources.</li>
                 </ul>
-                <button type="button" class="close-modal">
-                    Close
-                </button>
+
+                <button type="button" class="close-modal">Close</button>
+
             </dialog>
 
             <!-- SILVER MEMBERSHIP DIALOG -->
-
             <dialog id="silver-modal" aria-labelledby="silver-modal-heading">
+
                 <h2 id="silver-modal-heading">Silver Membership Benefits</h2>
+
                 <ul>
                     <li>All Bronze membership benefits.</li>
                     <li>Additional advertising opportunities.</li>
@@ -269,12 +271,55 @@
                     <li>Special business training.</li>
                     <li>Business spotlight opportunities.</li>
                 </ul>
-                <button type="button" class="close-modal">
-                    Close
-                </button>
+
+                <button type="button" class="close-modal">Close</button>
+
             </dialog>
 
             <!-- GOLD MEMBERSHIP DIALOG -->
-
             <dialog id="gold-modal" aria-labelledby="gold-modal-heading">
-                <h2 id="gold
+
+                <h2 id="gold-modal-heading">Gold Membership Benefits</h2>
+
+                <ul>
+                    <li>All Silver membership benefits.</li>
+                    <li>Premium business advertising opportunities.</li>
+                    <li>Priority access to chamber events.</li>
+                    <li>Exclusive networking opportunities.</li>
+                    <li>Featured business promotions.</li>
+                    <li>Priority business development support.</li>
+                </ul>
+
+                <button type="button" class="close-modal">Close</button>
+
+            </dialog>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+
+            <div>
+                <h3>Maputo Chamber of Commerce</h3>
+                <p>Maputo, Mozambique</p>
+                <p>Connecting Businesses, Building Community</p>
+            </div>
+
+            <div>
+                <p>
+                    Copyright &copy;
+                    <span id="currentyear"></span>
+                    Maputo Chamber of Commerce
+                </p>
+
+                <p id="lastmodified"></p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
