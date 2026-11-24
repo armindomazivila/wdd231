@@ -4,12 +4,15 @@
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     line-height: 1.6;
+    background-color: #f4f6f8;
+    color: #333333;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -42,6 +45,13 @@ body {
     margin: 4px 0 0;
 }
 
+.site-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+
 
 #menu-button {
     display: block;
@@ -49,10 +59,6 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
 }
-
-/* =========================
-   MOBILE NAVIGATION
-========================= */
 
 #navigation {
     display: none;
@@ -72,6 +78,7 @@ body {
 }
 
 
+
 main {
     width: 100%;
     margin: 15px auto;
@@ -85,6 +92,7 @@ h2 {
 section {
     margin-bottom: 25px;
 }
+
 
 
 .directory-section {
@@ -106,7 +114,10 @@ section {
 
 
 footer {
+    background-color: #12304a;
+    color: #ffffff;
     padding: 25px 15px;
+    margin-top: 40px;
 }
 
 .footer-container {
@@ -114,6 +125,7 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -129,17 +141,6 @@ footer {
     text-align: center;
 }
 
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.site-name {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 0;
-}
 
 @media screen and (max-width: 380px) {
 
