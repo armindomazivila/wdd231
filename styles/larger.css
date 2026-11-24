@@ -1,29 +1,115 @@
 @media screen and (min-width: 768px) {
 
-    header {
+
+    .site-header {
+        flex-wrap: nowrap;
+        padding: 1rem 2rem;
+    }
+
+    .brand {
+        font-size: 1.3rem;
+    }
+
+    /* Hide hamburger menu on larger screens */
+    .menu-toggle {
+        display: none;
+    }
+
+
+    .primary-nav {
         display: flex;
-        justify-content: space-between;
+        flex-direction: row;
+        justify-content: flex-end;
         align-items: center;
+        width: auto;
+        margin-top: 0;
     }
 
-    nav ul {
-        display: flex;
-        gap: 1.5rem;
+    .primary-nav a {
+        padding: 0.75rem 1.2rem;
+        border-top: none;
+        border-bottom: 3px solid transparent;
     }
 
-    .home-grid {
-        display: grid;
+    .primary-nav a:hover,
+    .primary-nav a:focus {
+        background-color: var(--secondary-color);
+        border-bottom-color: var(--accent-color);
+    }
+
+    .primary-nav a.active {
+        background-color: transparent;
+        border-bottom: 3px solid var(--accent-color);
+    }
+
+
+
+    main {
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+
+
+    .content-grid {
         grid-template-columns: 2fr 1fr;
         gap: 1.5rem;
+        align-items: stretch;
     }
 
-    .certificate {
+    .about-panel {
+        grid-column: 1;
+    }
+
+    .photo-panel {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .certificate-panel {
         grid-column: 1 / -1;
     }
 
-    .course-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+
+
+
+    .photo-container img {
+        max-width: 320px;
     }
+
+
+
+    .course-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
+
+
+
+    .site-footer {
+        padding: 2rem;
+    }
+
+}
+
+
+@media screen and (min-width: 1100px) {
+
+    main {
+        padding: 2.5rem;
+    }
+
+    .content-grid {
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+
+    .course-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
 }
