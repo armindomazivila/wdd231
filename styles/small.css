@@ -302,3 +302,16 @@ h2 {
     outline: 3px solid var(--accent-color);
     outline-offset: 3px;
 }
+
+.course-card p {
+    margin: 0.5rem 0;
+}
+
+.course-card.completed {
+    background-color: var(--completed-color);
+    border-left-color: #27834a;
+}
+
+.course-card h3 {
+    margin-bottom: 0.75rem;
+}
