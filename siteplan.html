@@ -4,29 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description"
         content="StudyFinder website plan: a platform helping students discover free educational resources around the world.">
-
     <meta name="author" content="Armindo Armando Mazivila">
-
     <title>StudyFinder | Website Site Plan</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
-
     <style>
+        /*CSS variables for color identity*/
         :root {
-            --primary-color: #17324D;
-            --secondary-color: #0F766E;
-            --accent-color: #F4B942;
-            --background-color: #F5F7FA;
-            --text-color: #263238;
+            --primary-color: #1E3A8A;
+            --secondary-color: #16A34A;
+            --light-blue: #DBEAFE;
+            --light-green: #DCFCE7;
+            --accent-color: #FACC15;
+            --background-color: #F8FAFC;
+            --text-color: #111827;
             --white-color: #FFFFFF;
+            --gray-color: #64748B;
+            --border-color: #E2E8F0;
         }
 
+        /*Global Styles*/
         * {
             box-sizing: border-box;
         }
@@ -40,44 +41,55 @@
         }
 
         header {
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg,
+                    var(--primary-color),
+                    #2563EB);
             color: var(--white-color);
             text-align: center;
-            padding: 2rem 1rem;
+            padding: 3rem 1rem;
         }
 
         header h1 {
             font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
             margin-bottom: 0.5rem;
         }
 
         header p {
-            margin: 0;
+            margin: 0.3rem 0;
         }
 
+        /*Main Content Styles*/
+
         main {
-            max-width: 950px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            max-width: 1000px;
+            margin: 2.5rem auto;
+            padding: 0 1.2rem;
         }
 
         section {
             background-color: var(--white-color);
-            margin-bottom: 1.5rem;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 5px solid var(--secondary-color);
-        }
-
-        h2,
-        h3 {
-            font-family: 'Poppins', sans-serif;
-            color: var(--primary-color);
+            margin-bottom: 1.8rem;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
         }
 
         h2 {
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 0.5rem;
+            color: var(--primary-color);
+            font-family: 'Poppins', sans-serif;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 0.6rem;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        p {
+            margin-bottom: 1rem;
         }
 
         .highlight {
@@ -85,61 +97,109 @@
             font-weight: bold;
         }
 
-        .color-sample {
-            display: inline-block;
-            width: 75px;
-            height: 35px;
-            vertical-align: middle;
-            border: 1px solid #999999;
-            margin-right: 10px;
-            border-radius: 4px;
+        /*Color Palette Styles*/
+
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,
+                    minmax(180px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1.5rem;
         }
 
-        .primary {
-            background-color: var(--primary-color);
-        }
-
-        .secondary {
-            background-color: var(--secondary-color);
-        }
-
-        .accent {
-            background-color: var(--accent-color);
-        }
-
-        .background {
+        .palette-card {
             background-color: var(--background-color);
-        }
-
-        .text {
-            background-color: var(--text-color);
-        }
-
-        .wireframe-note {
-            background-color: var(--background-color);
-            border: 2px dashed var(--secondary-color);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
             padding: 1rem;
-            border-radius: 6px;
+            text-align: center;
+            transition: transform 0.2s ease;
         }
 
+        .palette-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .color-box {
+            width: 100%;
+            height: 75px;
+            border-radius: 8px;
+        }
+
+        .palette-card h3 {
+            margin-bottom: 0.2rem;
+            font-size: 1rem;
+        }
+
+        .palette-card p {
+            font-weight: bold;
+            margin: 0.3rem 0;
+        }
+
+        .palette-card small {
+            color: var(--gray-color);
+        }
+
+
+        /*Wireframe Note Styles*/
+        .wireframe-note {
+            background-color: var(--light-blue);
+            border-left: 5px solid var(--primary-color);
+            padding: 1.2rem;
+            border-radius: 8px;
+        }
+
+        .wireframe-note h3 {
+            color: var(--primary-color);
+        }
+
+
+        /*Footer Styles*/
         footer {
             background-color: var(--primary-color);
             color: var(--white-color);
             text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
+            padding: 2rem;
         }
 
+        footer p {
+            margin: 0.3rem 0;
+        }
+
+        /* Responsive Styles */
         @media screen and (max-width: 600px) {
+            header {
+                padding: 2rem 1rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
             main {
                 margin: 1rem auto;
+                padding: 0 0.8rem;
             }
 
             section {
-                padding: 1rem;
+                padding: 1.2rem;
             }
 
-            header {
+            .color-palette {
+                grid-template-columns: repeat(auto-fit,
+                        minmax(140px, 1fr));
+                gap: 0.8rem;
+            }
+
+            .palette-card {
+                padding: 0.8rem;
+            }
+
+            .color-box {
+                height: 60px;
+            }
+
+            footer {
                 padding: 1.5rem 1rem;
             }
         }
@@ -148,31 +208,29 @@
 
 <body>
 
+    /*Header Section*/
     <header>
         <h1>StudyFinder</h1>
         <p>Website Planning Document</p>
         <p>Prepared by Armindo Armando Mazivila</p>
     </header>
-
+    <!-- MAIN CONTENT -->
     <main>
 
+        /*Site Name Section*/
         <section>
             <h2>1. Site Name</h2>
-
             <h3>StudyFinder</h3>
-
             <p>
                 StudyFinder is a name that combines two simple words:
                 "Study" and "Finder". The name communicates the main
                 purpose of the platform: helping students find educational
                 resources and information more easily.
             </p>
-
             <p>
                 The name was selected because it is simple, memorable,
                 and understandable to students from different countries.
             </p>
-
             <p>
                 <strong>Proposed domain:</strong> studyfinder.org
                 <br>
@@ -180,35 +238,32 @@
             </p>
         </section>
 
+
+        /*Site Purpose Section*/
         <section>
             <h2>2. Site Purpose</h2>
-
             <p>
                 StudyFinder will be an educational platform designed to
                 help students around the world discover free learning
                 resources on different subjects and topics.
             </p>
-
             <p>
                 Visitors will be able to search for educational topics,
                 explore useful learning websites, and access reliable
                 external resources.
             </p>
-
             <p>
                 The platform will initially provide content in English.
                 A language selector will allow users to choose other
                 languages. Where possible, translated explanations will
                 appear alongside the original learning resources.
             </p>
-
             <p>
                 The main goal is to make educational information easier
                 to discover and understand, especially for students who
                 face language barriers or have limited access to learning
                 materials.
             </p>
-
             <p>
                 Future development may include additional languages,
                 more learning categories, and advertising to support
@@ -216,35 +271,29 @@
             </p>
         </section>
 
+        /*Target Audience Section*/
         <section>
             <h2>3. Target Audience and Scenarios</h2>
-
             <h3>Target Audience</h3>
-
             <p>
                 StudyFinder is intended for students, independent
                 learners, and anyone interested in improving their
                 knowledge through online educational resources.
             </p>
-
             <h3>Visitor Scenarios</h3>
-
             <ol>
                 <li>
                     Where can I find free online resources to learn
                     programming as a beginner?
                 </li>
-
                 <li>
                     Can I find educational resources explained in
                     Portuguese instead of English?
                 </li>
-
                 <li>
                     Which websites provide reliable information about
                     mathematics, science, and technology?
                 </li>
-
                 <li>
                     How can I discover learning materials without
                     spending money?
@@ -252,91 +301,107 @@
             </ol>
         </section>
 
+        /*Color Scheme Section*/
         <section>
             <h2>4. Color Scheme</h2>
-
             <p>
-                StudyFinder will use a clean and professional color
-                scheme that communicates trust, learning, and clarity.
+                StudyFinder will use a modern combination of blue, green,
+                yellow, white, and dark text. These colors were selected
+                to create a welcoming, professional, and accessible
+                learning environment.
             </p>
-
-            <h3>Selected Colors</h3>
-
-            <p>
-                <span class="color-sample primary"></span>
-                <strong>Primary: #17324D</strong>
-                <br>
-                Used for the header, footer, and main headings.
-                This dark blue represents trust and professionalism.
-            </p>
-
-            <p>
-                <span class="color-sample secondary"></span>
-                <strong>Secondary: #0F766E</strong>
-                <br>
-                Used for section accents and highlighted information.
-                It represents growth and learning.
-            </p>
-
-            <p>
-                <span class="color-sample accent"></span>
-                <strong>Accent: #F4B942</strong>
-                <br>
-                Used for decorative details and important highlights.
-            </p>
-
-            <p>
-                <span class="color-sample background"></span>
-                <strong>Background: #F5F7FA</strong>
-                <br>
-                Used as the main page background to keep the design
-                clean and comfortable to read.
-            </p>
-
-            <p>
-                <span class="color-sample text"></span>
-                <strong>Text: #263238</strong>
-                <br>
-                Used for paragraphs and general content.
-            </p>
+            <div class="color-palette">
+                <div class="palette-card">
+                    <div class="color-box" style="background:#1E3A8A;"></div>
+                    <h3>Primary Blue</h3>
+                    <p>#1E3A8A</p>
+                    <small>
+                        Headers, navigation, and important headings.
+                    </small>
+                </div>
+                <div class="palette-card">
+                    <div class="color-box" style="background:#16A34A;"></div>
+                    <h3>Learning Green</h3>
+                    <p>#16A34A</p>
+                    <small>
+                        Buttons, links, and learning indicators.
+                    </small>
+                </div>
+                <div class="palette-card">
+                    <div class="color-box" style="background:#DBEAFE;"></div>
+                    <h3>Light Blue</h3>
+                    <p>#DBEAFE</p>
+                    <small>
+                        Information panels and secondary backgrounds.
+                    </small>
+                </div>
+                <div class="palette-card">
+                    <div class="color-box" style="background:#DCFCE7;"></div>
+                    <h3>Light Green</h3>
+                    <p>#DCFCE7</p>
+                    <small>
+                        Learning cards and highlighted content.
+                    </small>
+                </div>
+                <div class="palette-card">
+                    <div class="color-box" style="background:#FACC15;"></div>
+                    <h3>Discovery Yellow</h3>
+                    <p>#FACC15</p>
+                    <small>
+                        Important highlights and visual accents.
+                    </small>
+                </div>
+                <div class="palette-card">
+                    <div class="color-box" style="background:#FFFFFF; border:1px solid #CBD5E1;">
+                    </div>
+                    <h3>White</h3>
+                    <p>#FFFFFF</p>
+                    <small>
+                        Main content backgrounds and cards.
+                    </small>
+                </div>
+                <div class="palette-card">
+                    <div class="color-box" style="background:#111827;"></div>
+                    <h3>Dark Text</h3>
+                    <p>#111827</p>
+                    <small>
+                        Paragraphs and general website text.
+                    </small>
+                </div>
+            </div>
         </section>
+
+        /*Typography Section*/
 
         <section>
             <h2>5. Typography</h2>
-
             <h3>Poppins</h3>
-
             <p>
                 Poppins will be used for headings, including the main
                 website title and section headings. Its appearance is
-                modern and clear.
+                modern, clean, and professional.
             </p>
-
             <h3>Roboto</h3>
-
             <p>
                 Roboto will be used for paragraphs, descriptions,
                 navigation text, and general website content because
                 it is easy to read on desktop and mobile screens.
             </p>
-
             <p class="highlight">
                 The website will use these two fonts consistently
                 to create a simple and readable experience.
             </p>
         </section>
 
+        <!-- SECTION 6: WIREFRAMES -->
         <section>
             <h2>6. Wireframes</h2>
-
             <p>
                 The StudyFinder homepage will have a responsive layout
                 that works on mobile phones, tablets, and desktop
                 computers.
             </p>
-
             <h3>Small Viewport – Mobile</h3>
-
             <p>
                 The mobile homepage will have a vertical layout.
                 The header will contain the StudyFinder logo and a
@@ -344,35 +409,32 @@
                 message, a search area, learning categories, and
                 recommended educational resources.
             </p>
-
             <h3>Large Viewport – Desktop</h3>
-
             <p>
                 The desktop homepage will use a wider layout.
-                The navigation links will appear horizontally.
+                Navigation links will appear horizontally.
                 The search area will be prominent, and learning
                 categories and recommended resources may appear
                 in columns.
             </p>
-
             <div class="wireframe-note">
                 <h3>Your Wireframe Drawings</h3>
-
                 <p>
                     Create two original black-and-white sketches:
                 </p>
-
                 <ol>
-                    <li>Draw the StudyFinder homepage for a mobile screen.</li>
-                    <li>Draw the StudyFinder homepage for a desktop screen.</li>
+                    <li>
+                        Draw the StudyFinder homepage for a mobile screen.
+                    </li>
+                    <li>
+                        Draw the StudyFinder homepage for a desktop screen.
+                    </li>
                 </ol>
-
                 <p>
                     Include the header, navigation, search area,
                     learning categories, recommended resources,
                     and footer in your drawings.
                 </p>
-
                 <p>
                     You can draw them on paper, take photographs,
                     and insert the images into this section when
@@ -380,14 +442,12 @@
                 </p>
             </div>
         </section>
-
     </main>
-
+    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 StudyFinder | Website Site Plan</p>
         <p>Prepared by Armindo Armando Mazivila</p>
     </footer>
-
 </body>
 
 </html>
