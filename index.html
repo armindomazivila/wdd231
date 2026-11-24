@@ -2,40 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Armindo A. Mazivila | WDD 231 course home page, featuring coursework and web development projects.">
+        content="Armindo Armando Mazivila's WDD 231 course homepage, showcasing web development coursework, completed courses, and programming projects.">
     <meta name="author" content="Armindo Armando Mazivila">
+    <title>Course Home | WDD 231 | Armindo Mazivila</title>
 
-    <title>Course Home | WDD 231</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
 
-    <link rel="icon" href="images/site-mark.svg" type="image/svg+xml">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
+    <!-- JavaScript Files -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/course.js" defer></script>
 </head>
 
 <body>
+
+    <!-- Site Header -->
     <header class="site-header">
-        <a class="brand" href="index.html" aria-label="Course home">
-            <img src="images/site-mark.svg" width="48" height="48" alt="">
+        <a class="brand" href="index.html" aria-label="Armindo Mazivila - Home">
+            <img src="images/logo.svg" width="48" height="48" alt="">
             <span>Armindo Armando Mazivila</span>
         </a>
 
+        <!-- Mobile Navigation Button -->
         <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"
             aria-controls="primary-nav">
             <span></span>
             <span></span>
             <span></span>
         </button>
-
+        <!-- Main Navigation -->
         <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
             <a class="active" href="index.html" aria-current="page">Home</a>
             <a href="chamber/">Chamber</a>
@@ -43,35 +52,44 @@
         </nav>
     </header>
 
+    <!-- Main Content -->
     <main>
         <h1>Home</h1>
-
         <div class="content-grid">
+            <!-- About Me Section -->
             <section class="panel about-panel">
                 <h2>About Me</h2>
                 <div class="panel-body">
                     <p>
-                        Hello! I’m <strong>Armindo Armando Mazivila</strong>. I’m studying web and computer
-                        programming and building skills in accessible, responsive web development.
+                        Hello! I'm <strong>Armindo Armando Mazivila</strong>.
+                        I'm a Software Development student with an interest
+                        in web development, programming, and technology.
                     </p>
                     <p>
-                        This page is my WDD 231 course home. It brings together my learning,
-                        course progress, and project links.
+                        Through my studies, I'm developing skills in HTML,
+                        CSS, JavaScript, Python, and C#. My goal is to build
+                        accessible, responsive, and user-friendly web
+                        applications.
+                    </p>
+                    <p>
+                        This page serves as my WDD 231 course homepage,
+                        showcasing my learning progress, completed courses,
+                        and web development projects.
                     </p>
                 </div>
             </section>
-
+            <!-- Student Photo Section -->
             <section class="panel photo-panel">
                 <h2>Student Photo</h2>
-                <div class="photo-placeholder" role="img" aria-label="Add an optimized student portrait here">
-                    <span>Armindo Photo</span>
-                    <small>Armindo.jpg</small>
+                <div class="photo-container">
+                    <img src="images/armindo.jpg" alt="Portrait of Armindo Armando Mazivila" width="400" height="400"
+                        loading="lazy">
                 </div>
             </section>
-
+            <!-- Certificate Courses Section -->
             <section class="panel certificate-panel">
                 <h2>Web and Computer Programming Certificate</h2>
-
+                <!-- Course Filter Buttons -->
                 <div class="filter-controls" role="group" aria-label="Filter courses">
                     <button type="button" data-filter="all" class="selected" aria-pressed="true">
                         All Courses
@@ -83,40 +101,50 @@
                         CSE Courses
                     </button>
                 </div>
-
+                <!-- Dynamic Credit Total -->
                 <p class="credit-total" aria-live="polite">
-                    Credits shown: <strong id="credit-total">0</strong>
+                    Credits shown:
+                    <strong id="credit-total">0</strong>
                 </p>
-
-                <div id="course-list" class="course-list" aria-live="polite"></div>
+                <!-- Courses Generated by JavaScript -->
+                <div id="course-list" class="course-list" aria-live="polite">
+                </div>
             </section>
         </div>
     </main>
 
+    <!-- Site Footer -->
     <footer class="site-footer">
-        <div class="social-links" aria-label="Social profiles">
-            <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer"
-                aria-label="GitHub profile">
+        <!-- Social Media Links -->
+        <nav class="social-links" aria-label="Social media links">
+            <a href="https://github.com/armindomazivila" target="_blank" rel="noopener noreferrer"
+                aria-label="Visit my GitHub profile">
                 <span aria-hidden="true">GH</span>
             </a>
-            <a href="https://www.linkedin.com/in/your-profile/" target="_blank" rel="noopener noreferrer"
-                aria-label="LinkedIn profile">
+            <a href="https://www.linkedin.com/in/armindo-mazivila-76884a150/" target="_blank" rel="noopener noreferrer"
+                aria-label="Visit my LinkedIn profile">
                 <span aria-hidden="true">in</span>
             </a>
-            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit YouTube">
                 <span aria-hidden="true">▶</span>
             </a>
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram">
                 <span aria-hidden="true">◎</span>
             </a>
-        </div>
+        </nav>
 
+        <!-- Copyright Information -->
         <p class="copyright">
-            © <span id="current-year"></span> Armindo Armando Mazivila
-            <span class="separator">·</span> Mozambique
+            &copy; <span id="current-year"></span>
+            Armindo Armando Mazivila
+            <span class="separator">&bull;</span>
+            Mozambique
         </p>
 
-        <p id="lastModified" class="modified">Last modified: </p>
+        <!-- Last Modified Date -->
+        <p id="lastModified" class="modified">
+            Last modified:
+        </p>
     </footer>
 </body>
 
