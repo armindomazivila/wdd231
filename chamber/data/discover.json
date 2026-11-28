@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Maputo Railway Station",
+        "address": "Praça dos Trabalhadores, Maputo",
+        "description": "Discover one of Africa's most beautiful railway stations, famous for its historic architecture and impressive green dome.",
+        "image": "images/business-1.webp",
+        "alt": "Historic Maputo Railway Station",
+        "link": "https://www.google.com/maps/search/?api=1&query=Maputo+Railway+Station"
+    },
+    {
+        "name": "Maputo Central Market",
+        "address": "Avenida 25 de Setembro, Maputo",
+        "description": "Experience the vibrant atmosphere of Maputo's central market, where visitors can discover fresh produce, seafood, local crafts, and traditional products.",
+        "image": "images/business-2.webp",
+        "alt": "Maputo Central Market",
+        "link": "https://www.google.com/maps/search/?api=1&query=Mercado+Central+Maputo"
+    },
+    {
+        "name": "Maputo Cathedral",
+        "address": "Praça da Independência, Maputo",
+        "description": "Visit the Cathedral of Our Lady of the Immaculate Conception, an important religious and architectural landmark in the city.",
+        "image": "images/business-3.webp",
+        "alt": "Maputo Cathedral",
+        "link": "https://www.google.com/maps/search/?api=1&query=Maputo+Cathedral"
+    },
+    {
+        "name": "Maputo Fortress",
+        "address": "Praça 25 de Junho, Maputo",
+        "description": "Explore the historic Fortaleza de Maputo and learn about the city's colonial history and cultural heritage.",
+        "image": "images/business-4.webp",
+        "alt": "Maputo Fortress",
+        "link": "https://www.google.com/maps/search/?api=1&query=Fortaleza+de+Maputo"
+    },
+    {
+        "name": "FEIMA Craft Market",
+        "address": "Parque dos Continuadores, Maputo",
+        "description": "Discover Mozambican creativity through handmade crafts, traditional artwork, sculptures, paintings, and local souvenirs.",
+        "image": "images/business-5.webp",
+        "alt": "FEIMA craft market in Maputo",
+        "link": "https://www.google.com/maps/search/?api=1&query=FEIMA+Maputo"
+    },
+    {
+        "name": "Tunduru Botanical Gardens",
+        "address": "Avenida Samora Machel, Maputo",
+        "description": "Enjoy a peaceful green space in the heart of Maputo, featuring beautiful trees, tropical plants, and relaxing walking paths.",
+        "image": "images/business-6.webp",
+        "alt": "Tunduru Botanical Gardens",
+        "link": "https://www.google.com/maps/search/?api=1&query=Jardim+Tunduru+Maputo"
+    },
+    {
+        "name": "Costa do Sol Beach",
+        "address": "Avenida da Marginal, Maputo",
+        "description": "Experience the beautiful coastline of Maputo, with ocean views, sandy beaches, and opportunities to enjoy local seafood.",
+        "image": "images/business-7.webp",
+        "alt": "Costa do Sol coastline",
+        "link": "https://www.google.com/maps/search/?api=1&query=Costa+do+Sol+Maputo"
+    },
+    {
+        "name": "Independence Square",
+        "address": "Praça da Independência, Maputo",
+        "description": "Explore one of Maputo's most important public squares, featuring the statue of Samora Machel and historic buildings.",
+        "image": "images/business-8.webp",
+        "alt": "Independence Square in Maputo",
+        "link": "https://www.google.com/maps/search/?api=1&query=Praca+da+Independencia+Maputo"
+    }
+]
